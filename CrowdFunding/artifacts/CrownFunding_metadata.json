@@ -16,6 +16,44 @@
 				"type": "error"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Funded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdraw",
+				"type": "event"
+			},
+			{
 				"stateMutability": "payable",
 				"type": "fallback"
 			},
@@ -40,8 +78,59 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					}
+				],
+				"name": "funderToAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "funders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getNumberOfFunders",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -60,6 +149,25 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					}
+				],
+				"name": "isFunders",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "isFunded",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -113,19 +221,19 @@
 			]
 		},
 		"CrowdFunding/CrownFunding.sol": {
-			"keccak256": "0x4cc7cd4177544a8b19158f757dd74e736a1abd4ba4e9427004a1ed549aa06707",
+			"keccak256": "0x5171aac211c98c90e65b4e64118cc0270e8a60086ca8da06694f34f8606b85d9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e299e7d32ffab5dfde0a67b94c2add5b015f94203ee16256b9910612f6ad6f4b",
-				"dweb:/ipfs/QmcHMieA3Au5JqQECNgAXHqkMWkjsBjn8QobCTPnybYvbp"
+				"bzz-raw://8f1e4318b4a11950b915496c43269bf19a5f98268d230ce7ede6cc25aabbc044",
+				"dweb:/ipfs/QmaLqvX5Jm5pf4cX6dSFJVdnVeN8UenRHML7xfzR3DGhqU"
 			]
 		},
 		"CrowdFunding/PriceConverter.sol": {
-			"keccak256": "0xd5c66ead33e5fe6c0963b1bdd47295273515002723cce0a6d56395e9b179eebf",
+			"keccak256": "0xac9afba819d7e987fb6e3bca50ab4af601808c9c8888f614f4a59cfff3923b80",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c49e5e91fde70aaadb86396362a119c7d436ac9bb2bca7bd3b4991f802580a5a",
-				"dweb:/ipfs/Qmcmf5o8tF54mBm2iu8eZdAz8rwFRFt43WuVicUBXkwSfC"
+				"bzz-raw://1c9134e5e73353effc350839b4c1899f99d21a509193886a2e96798f8f6fa25f",
+				"dweb:/ipfs/Qmdunyt5QJXHfvN94rD7iY9GNwNyZq1CcGrizL75CMPgTf"
 			]
 		}
 	},
